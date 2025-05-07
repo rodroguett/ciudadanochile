@@ -1,0 +1,28 @@
+<h2>Resultados de la Búsqueda para: <%= @query %></h2>
+
+<% if @citizens.any? %>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>RUT</th>
+        <th>Dirección</th>
+        <th>Locación</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @citizens.each do |citizen| %>
+        <tr>
+          <td><%= citizen.name %></td>
+          <td><%= citizen.rut %></td>
+          <td><%= citizen.address %></td>
+          <td><%= citizen.location %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>No se encontraron ciudadanos con la búsqueda: <%= @query %></p>
+<% end %>
+
+<%= link_to "Volver a la búsqueda", root_path %>
