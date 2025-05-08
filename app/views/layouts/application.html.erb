@@ -16,6 +16,7 @@
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
@@ -23,6 +24,35 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">buscarciudadano.cl</a>
+      </div>
+    </nav>
+
+    <div class="container text-center mt-5">
+      <div class="row">
+        <div class="col">
+        </div>
+
+        <div class="col">
+          <h1>Buscar Ciudadano</h1>
+        </div>
+
+        <div class="col">
+        </div>
+      </div>
+    
+      <%= yield %>
+
+    </div>
+
+    <div class="container fixed-bottom"> 
+      <footer class="py-3 my-4"> 
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"> 
+          <p>© 2025 RADE, Inc. All rights reserved.</p>
+        </div>
+      </footer> 
+    </div>
   </body>
 </html>
