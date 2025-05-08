@@ -22,7 +22,7 @@ class CitizensController < ApplicationController
     @citizen = Citizen.new(citizen_params)
 
     if @citizen.save
-      redirect_to @citizen, notice: 'Citizen was successfully created.'
+      redirect_to @citizen, notice: "Citizen was successfully created."
     else
       render :new
     end
@@ -31,7 +31,7 @@ class CitizensController < ApplicationController
   # PATCH/PUT /citizens/1
   def update
     if @citizen.update(citizen_params)
-      redirect_to @citizen, notice: 'Citizen was successfully updated.'
+      redirect_to @citizen, notice: "Citizen was successfully updated."
     else
       render :edit
     end
@@ -50,5 +50,4 @@ class CitizensController < ApplicationController
       @citizens = [] # O podrías mostrar todos los ciudadanos si la búsqueda está vacía
     end
   end
-
 end
