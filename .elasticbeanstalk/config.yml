@@ -1,0 +1,6 @@
+branch-defaults:
+  feature/eb-config:
+    environment: null
+    group_suffix: null
+global:
+  profile: eb-cli
