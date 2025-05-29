@@ -17,6 +17,5 @@ test:
   database: citizensdb
 
 production:
-  primary:
-    <<: *default
-    url: <%= ENV["DATABASE_URL"] %>
+  <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
