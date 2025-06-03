@@ -19,5 +19,8 @@ test:
 
 production:
   <<: *default
-  database: <%= ENV["MYSQL_DATABASE"] %>
-  password: <%= ENV["MYSQL_ROOT_PASSWORD"] %>
+  host: <%= ENV["MYSQLHOST"] %>
+  port: <%= ENV["MYSQLPORT"] %>
+  database: <%= ENV["MYSQLDATABASE"] %>
+  username: <%= ENV["MYSQLUSER"] %>
+  password: <%= ENV["MYSQLPASSWORD"] %>
