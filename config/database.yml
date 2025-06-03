@@ -4,6 +4,7 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password:
+  socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *default
@@ -18,5 +19,5 @@ test:
 
 production:
   <<: *default
-  database: citizensdb_production
-  url: <%= ENV["DATABASE_URL"] %>
+  database: <%= ENV["MYSQL_DATABASE"] %>
+  password: <%= ENV["MYSQL_ROOT_PASSWORD"] %>
